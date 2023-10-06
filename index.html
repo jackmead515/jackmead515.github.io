@@ -2,14 +2,55 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Jack</title>
+        <title>Jack's Portfolio</title>
+
+        <!-- styles -->
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <a href="/notebooks/deep_sea_coral_exploration.html">
-            Deep Sea Coral Exploration
-        </a>
-	<a href="/notebooks/usa_covid19_exploration.html">
-	    USA COVID19 Anaylsis
-	</a>
+        <header>
+            <img src="images/dragon.gif" alt="dragon" width="80", height="80">
+            <marquee behavior="alternate">
+                <h1>Jack's Portfolio</h1>
+            </marquee>
+            <img src="images/warrior.gif" alt="warrior" width="80", height="80">
+        </header>
+        
+
+        <div class="notebooks__container">
+            
+            <a href="/notebooks/usa_covid19_exploration.html">
+                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
+                
+                <div class="notebooks__title">
+                    <img src="images/new.gif" alt="star" width="20", height="20">
+                    <h3>USA COVID19 Anaylsis</h3>
+                </div>
+                <span>2023-09-26</span>
+                <p>
+                    As part of the IBM Machine Learning course, I explored
+                    a COVID19 dataset provided through Google's exceptional
+                    data source. Some modeling was done to predict the
+                    presence of new cases through time.
+                </p>
+                
+            </a>
+
+            <a href="/notebooks/deep_sea_coral_exploration.html">
+                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
+
+                <div class="notebooks__title">
+                    <img src="images/skull.gif" alt="star" width="20", height="20">
+                    <h3>Deep Sea Coral Exploration</h3>
+                </div>
+                <span>2023-09-12</span>
+                <p>
+                    As part of the IBM Machine Learning course, I explored
+                    a deep sea coral dataset provided by NOAA. Some exploration
+                    and modeling was done to gain some insight into the dataset.
+                </p>
+            </a>
+
+        </div>
     </body>
 </html>
