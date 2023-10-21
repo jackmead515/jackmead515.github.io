@@ -6,82 +6,132 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- styles -->
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
         <header>
-            <img src="images/dragon.gif" alt="dragon" width="80", height="80">
-            <marquee behavior="alternate">
-                <h1>Jack's Portfolio</h1>
-            </marquee>
-            <img src="images/warrior.gif" alt="warrior" width="80", height="80">
+            <div class="header__headshot"></div>
+            <div>
+                <h1>Jack Mead</h1>
+                <p>Data Scientist | Data Engineer | Tinkerer | Surfer</p>
+                <div class="header__contact">
+                    <a href="https://github.com/jackmead515" target="_blank"><img width="16" height="16" src="images/github.png" alt="github"/></a>
+                    <a href="https://www.linkedin.com/in/jack-mead-687507a2/" target="_blank"><img width="16" height="16" src="images/linkedin.png" alt="github"/></a>
+                    <a href="mailto:jackmead515@gmail.com">
+                        <img style="margin-right: 10px" src="images/mail.gif" alt="email"/>jackmead515@gmail.com
+                    </a>
+                </div>
+            </div>
         </header>
+        <main>
+            <div class="main__about">
+                <h2>About</h2>
+                <p>
+                    I am a data scientist and engineer with a passion for my work. Growing up in Iowa,
+                    surrounded by corn fields and gardening with my family, I developed a love for
+                    agriculture and the environment. My entire career, I've been focusing on applying
+                    my skills to wrangle data together for agronomists, environmentalists, research
+                    scientists, and farmers whether on the land or in the sea. In my career, it's estimated 
+                    that I've helped to automated the collection of nearly <b>~1,000,000,000</b> images and certainly
+                    nearly a <b>pedabyte</b> of telemetry from sensors. (but who's counting). <img src="images/camera.gif" width="16" height="16"/>
+                </p>
+                <div class="about__section">
+                    <p>
+                        For agronomists, I automated timelapse imagery
+                        for research scientists to phenotype different species of corn. The biggest
+                        challenges were dealing with the extreme temperatures, humidity, lack of
+                        stable electricity, mischievous research scientists, and the limited
+                        resources of a Raspberry Pi. <img src="images/plant.gif" width="16" height="16"/>
+                    </p>
+                    <div class="about__image about__image--phenocam"></div>
+                </div>
+                <div class="about__section">
+                    <div class="about__image about__image--biocam"></div>
+                    <p>
+                        For fish farmers, I've automated the collection of video
+                        footage to monitor the growth and behavior of fish. In the open ocean,
+                        there is so much variability in the environment that it's difficult to
+                        even keep the cameras online. One of the biggest challenges was collaboration
+                        with a global team to ensure data collection. <img src="images/fish.gif" width="16" height="16"/>
+                    </p>
+                </div>
+                <div class="about__section">
+                    <p>
+                        For coffee farmers, I'm collecting images to monitor the growth 
+                        of their crops to predict yield, disease, and pests. The most fun
+                        part of this project is the volunteering aspect. I get to be in charge
+                        of the project and take ownership of the data collection and analysis.
+                        But the most challenging part is the amount of manual data collection
+                        that is required. <img src="images/coffee.gif" width="16" height="16"/>
+                    </p>
+                    <div class="about__image about__image--coffee"></div>
+                </div>
+                <p style="margin-top: 30px">
+                    Over time, I hope to continue to learn and grow as a data scientist 
+                    applying my skills to industries and communities in need. The environment
+                    will always remain a passion of mine and whether or not I'm working in
+                    the field, I will always be working to protect it. If your organization
+                    is in need of a data scientist or engineer looking to make a difference,
+                    please reach out to me at my email. <img src="images/globe.gif" width="16" height="16"/>
+                </p>
+            </div>
+            <div class="main__notebooks">
+                <h2>Projects</h2>
+                <p>
+                    I work on many different projects in my free time. Applying computer vision
+                    and AI to coffee plants, scuba diving footage, custom game engines, and other
+                    querkier projects. Feel free to check out any of my projects you find interesting.
+                </p>
+                <div class="main__section">
+                    <a class="notebook" href="notebooks/kona_coffee_ibm_classification.html">
+                        <h3>IBM Classification Course - Kona Coffee Yield</h3>
+                        <span><img src="images/new.gif"/>2023-10-15</span>
+                        <p>
+                            For the IBM Classification ML course, I decided to build my own
+                            dataset for the Kona Coffee project I am working on. Although it's a
+                            small dataset, it may reveal some interesting insights into what I
+                            will deal with in the future.
+                        </p>
+                    </a>
         
+                    <a class="notebook" href="notebooks/kona_coffee_intro.html">
+                        <h3>Kona Coffee Yield Identification - Introduction</h3>
+                        <span>2023-10-09</span>
+                        <p>
+                            As a volunteer research project, I decided to see if I could utilize
+                            my skillset as a data scientist and apply it to an industry in need.
+                            This is an introduction to the project and the data that will be collected.
+                        </p>
+                    </a>
+                    
+                    <a class="notebook" href="notebooks/usa_covid19_exploration.html">
+                        <h3>IBM Regression Course - USA COVID19 Anaylsis</h3>
+                        <span>2023-09-26</span>
+                        <p>
+                            As part of the IBM Machine Learning course, I explored
+                            a COVID19 dataset provided through Google's exceptional
+                            data source. Some modeling was done to predict the
+                            presence of new cases through time.
+                        </p>
+                    </a>
+        
+                    <a class="notebook" href="notebooks/deep_sea_coral_exploration.html">
+                        <h3>IBM Data Science Course - Deep Sea Coral Exploration</h3>
+                        <span>2023-09-12</span>
+                        <p>
+                            As part of the IBM Machine Learning course, I explored
+                            a deep sea coral dataset provided by NOAA. Some exploration
+                            and modeling was done to gain some insight into the dataset.
+                        </p>
+                    </a>
+                </div>
 
-        <div class="notebooks__container">
-
-            <a href="/notebooks/kona_coffee_ibm_classification.html">
-                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
                 
-                <div class="notebooks__title">
-                    <img src="images/new.gif" alt="star" width="20", height="20">
-                    <h3>Kona Coffee Yield Identification - Preliminary Classification</h3>
-                </div>
-                <span>2023-10-15</span>
-                <p>
-                    For the IBM Classification ML course, I decided to build my own
-                    dataset for the Kona Coffee project I am working on. Although it's a
-                    small dataset, it may reveal some interesting insights into what I
-                    will deal with in the future.
-                </p>
-            </a>
+    
+            </div>
 
-            <a href="/notebooks/kona_coffee_intro.html">
-                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
-                
-                <div class="notebooks__title">
-                    <img src="images/skull.gif" alt="star" width="20", height="20">
-                    <h3>Kona Coffee Yield Identification - Introduction</h3>
-                </div>
-                <span>2023-10-09</span>
-                <p>
-                    As a volunteer research project, I decided to see if I could utilize
-                    my skillset as a data scientist and apply it to an industry in need.
-                    This is an introduction to the project and the data that will be collected.
-                </p>
-            </a>
-            
-            <a href="/notebooks/usa_covid19_exploration.html">
-                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
-                
-                <div class="notebooks__title">
-                    <img src="images/skull.gif" alt="star" width="20", height="20">
-                    <h3>USA COVID19 Anaylsis</h3>
-                </div>
-                <span>2023-09-26</span>
-                <p>
-                    As part of the IBM Machine Learning course, I explored
-                    a COVID19 dataset provided through Google's exceptional
-                    data source. Some modeling was done to predict the
-                    presence of new cases through time.
-                </p>
-            </a>
-
-            <a href="/notebooks/deep_sea_coral_exploration.html">
-                <img src="images/rainbow.gif" class="notebooks__rainbow" alt="rainbow">
-
-                <div class="notebooks__title">
-                    <img src="images/skull.gif" alt="star" width="20", height="20">
-                    <h3>Deep Sea Coral Exploration</h3>
-                </div>
-                <span>2023-09-12</span>
-                <p>
-                    As part of the IBM Machine Learning course, I explored
-                    a deep sea coral dataset provided by NOAA. Some exploration
-                    and modeling was done to gain some insight into the dataset.
-                </p>
-            </a>
-
-        </div>
+        </main>
     </body>
 </html>

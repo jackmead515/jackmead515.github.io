@@ -1,0 +1,25 @@
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__headshot {
+    width: 20vw;
+    height: 20vw;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-image: url("../images/headshot.jpg");
+    background-size: cover;
+    background-position: center;
+}

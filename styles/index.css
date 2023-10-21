@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 10px;
+    padding-top: 40px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 16px;
+    color: #000;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 20px;
+}
