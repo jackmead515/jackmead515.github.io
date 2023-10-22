@@ -51,19 +51,23 @@ main {
 }
 
 .notebook {
-    display: block;
-    padding: 10px;
-    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-style: normal;
     text-decoration: none;
     color: #000;
     position: relative;
     box-sizing: border-box;
-    border-radius: 3px;
+    padding: 10px;
 }
 
 .notebook:hover {
     background-color: #eee;
+}
+
+.notebook > h4 {
+    margin: 0px;
 }
 
 .notebook > span {
