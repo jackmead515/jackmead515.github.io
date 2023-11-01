@@ -484,9 +484,7 @@ for i, row in watering.iterrows():
 ```
 
 
-    
-![png](markdown/auto_farm_soil_files/auto_farm_soil_16_0.png)
-    
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_16_0.png)
 
 
 Certainly an interesting first look at the data. We can see that the soil moisture varies from sensor to sensor but they all seem to follor the same pattern over time: They steady go up and then drop all of a sudden. If we overlay the watering times (that I manually recorded), we see that these dips coorespond to them.
@@ -513,8 +511,7 @@ for i, row in watering.iterrows():
 ```
 
 
-    
-![png](markdown/auto_farm_soil_files/auto_farm_soil_18_0.png)
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_18_0.png)
     
 
 
@@ -542,7 +539,7 @@ plt.show()
 
 
     
-![png](markdown/auto_farm_soil_files/auto_farm_soil_20_0.png)
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_20_0.png)
     
 
 
@@ -595,7 +592,7 @@ plt.show()
 
 
     
-![png](markdown/auto_farm_soil_files/auto_farm_soil_22_0.png)
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_22_0.png)
     
 
 
@@ -657,7 +654,7 @@ plt.show()
 
 
     
-![png](markdown/auto_farm_soil_files/auto_farm_soil_25_0.png)
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_25_0.png)
     
 
 
@@ -902,7 +899,7 @@ plt.show()
 
 
     
-![png](markdown/auto_farm_soil_files/auto_farm_soil_28_1.png)
+![png](/markdown/auto_farm_soil_files/auto_farm_soil_28_1.png)
     
 
 
