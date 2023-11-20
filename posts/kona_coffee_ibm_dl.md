@@ -203,7 +203,7 @@ for i, (lifecycle, group) in enumerate(df.groupby('lifecycle')):
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_8_0.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_8_0.png)
     
 
 
@@ -527,7 +527,7 @@ print(classification_report(y_test, y_pred))
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_18_1.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_18_1.png)
     
 
 
@@ -659,7 +659,7 @@ graph_history_metrics(history)
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_24_4.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_24_4.png)
     
 
 
@@ -816,7 +816,7 @@ graph_history_metrics(history)
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_28_5.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_28_5.png)
     
 
 
@@ -929,7 +929,7 @@ graph_history_metrics(history)
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_30_7.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_30_7.png)
     
 
 
@@ -1023,7 +1023,7 @@ graph_history_metrics(history)
 
 
     
-![png](/posts/(kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_32_5.png)
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_32_5.png)
     
 
 
