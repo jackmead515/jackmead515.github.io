@@ -1029,6 +1029,58 @@ graph_history_metrics(history)
 
 The mobilenet model took the longest to train, and actually performed the worst out of all the other models. With different initialization, regularization, optimizers, I'm sure it would perform better.
 
+# Model Summary
+
+
+```python
+final = [
+    ('logistic', 0.87, 0.74, 0.92, 0.86),
+    ('sdnn', 0.90, 0.82, 0.95, 0.90),
+    ('scnn', 0.87, 0.78, 0.96, 0.90),
+    ('resnet', 0.82, 0.76, 0.99, 0.90),
+    ('vgg16', 0.88, 0.85, 0.96, 0.92),
+    ('mobile', 0.72, 0.66, 0.81, 0.75)
+]
+
+columns = ['model', 'f1_ripe', 'f1_ripening', 'f1_unripe', 'accuracy']
+
+metrics_df = pd.DataFrame(final, columns=columns)
+
+metrics_df = pd.melt(metrics_df, id_vars=['model'], value_vars=['f1_ripe', 'f1_ripening', 'f1_unripe', 'accuracy'])
+
+# plot metrics against each other
+plt.figure(figsize=(5, 5))
+
+sns.catplot(
+    data=metrics_df,
+    x='model',
+    y='value',
+    hue='variable',
+    kind='bar',
+    height=5,
+    aspect=1.5
+)
+```
+
+
+
+
+    <seaborn.axisgrid.FacetGrid at 0x7f36219597e0>
+
+
+
+
+    <Figure size 500x500 with 0 Axes>
+
+
+
+    
+![png](/posts/kona_coffee_ibm_dl_files/kona_coffee_ibm_dl_35_2.png)
+    
+
+
+Comparing all the models against eachother, we see that the logisitic regression is actually quite strong for this dataset. We can improve the F1 score for the ripening class by switching to the sdnn or vgg16 model. We can also improve the overall accuracy by switching to any of the other models, except for the MobileNet model!
+
 # Final Remarks
 
 Comparing the different models, LogisiticRegression, SimpleDNN, SimpleCNN, ResNet50, VGG16, and MobileNet, we can see that the deep learning models do perform better than the traditional machine learning approach. However, the training times and workload with deep learning is significantly higher. Given the objective, and it's underlying goal, it wouldn't be extremely beneficial to use deep learning other than a SimpleDNN model. If we were anaylzing more features of the berries, such as the size, shape, and color, then a deep learning approach would be more beneficial.
