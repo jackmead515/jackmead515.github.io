@@ -37,7 +37,7 @@ main {
 
 .about__image--coffee {
     aspect-ratio: 1;
-    background-image: url("../images/kona_segment.png");
+    background-image: url("../images/kona_heatmap.png");
 }
 
 .main__notebooks {
