@@ -1,0 +1,1 @@
+jupyter nbconvert $1 --to html && python3 post_process.py $1

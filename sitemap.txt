@@ -1,0 +1,9 @@
+https://jackmead515.github.io/posts/kona_coffee_ibm_dl
+https://jackmead515.github.io/posts/kona_coffee_ibm_unsupervised
+https://jackmead515.github.io/posts/kona_coffee_ibm_classification
+https://jackmead515.github.io/notebooks/usa_covid19_exploration.html
+https://jackmead515.github.io/notebooks/deep_sea_coral_exploration.html
+https://jackmead515.github.io/posts/kona_coffee_update_one
+https://jackmead515.github.io/posts/kona_coffee_intro
+https://jackmead515.github.io/posts/auto_farm_soil
+https://jackmead515.github.io/notebooks/ensemble_seg.html
