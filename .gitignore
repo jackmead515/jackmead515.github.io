@@ -1,3 +1,4 @@
 _blogs/**/*.png
 _blogs/**/*.jpg
 _blogs/**/*.json
+_blogs/**/*.parquet
