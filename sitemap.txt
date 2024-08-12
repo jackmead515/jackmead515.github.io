@@ -7,3 +7,4 @@ https://jackmead515.github.io/posts/kona_coffee_update_one
 https://jackmead515.github.io/posts/kona_coffee_intro
 https://jackmead515.github.io/posts/auto_farm_soil
 https://jackmead515.github.io/notebooks/ensemble_seg.html
+https://jackmead515.github.io/notebooks/exploring_dominant_colors.html

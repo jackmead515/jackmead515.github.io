@@ -8,7 +8,7 @@ header {
 .header__contact {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
 }
 
 .header__headshot {
@@ -23,4 +23,12 @@ header {
     background-image: url("../images/headshot.jpg");
     background-size: cover;
     background-position: center;
+}
+
+/* max width of 300px */
+@media screen and (max-width: 750px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    };
 }
