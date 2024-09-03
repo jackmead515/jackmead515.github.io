@@ -21,12 +21,21 @@ if __name__ == '__main__':
     
     # add styles to pre with style tag
     style = soup.new_tag('style', type='text/css')
-    style.string = 'pre {overflow-y: auto;}'
+    style.string = ''
     soup.head.append(style)
     
     # add styles to printed dataframes
     style = soup.new_tag('style', type='text/css')
     style.string = """
+        .jp-RenderedHTMLCommon {
+            font-size: 16px !important;
+            line-height: 2 !important;
+        }
+    
+        pre {
+            overflow-y: auto;
+        }
+    
         table.dataframe > tbody > tr {
             white-space: nowrap !important;
         }
@@ -37,8 +46,38 @@ if __name__ == '__main__':
             white-space: nowrap !important;
             padding: 1em !important;
         }
+        
+        .jp-RenderedHTMLCommon p {
+            margin-top: 2em !important;
+            margin-bottom: 2em !important;
+        }
+        
+        .cm-editor.cm-s-jupyter .highlight pre {
+            padding: 1em !important;
+        }
+        
+        .jp-RenderedImage {
+            display: flex !important;
+            justify-content: center !important;
+            padding-top: 1em !important;
+            padding-bottom: 1em !important;
+            box-sizing: border-box !important;
+        }
+        
+        .jp-OutputArea-output pre {
+            white-space: revert !important;
+        }
     """
     soup.head.append(style)
+    
+    # change :root style variable
+    style = soup.new_tag('style', type='text/css')
+    style.string = """
+        :root {
+            --jp-content-font-family: sans-serif;
+            --jp-code-font-family-default: monospace;
+        }
+    """
     
     # find all table.dataframe
     for table in soup.find_all('table', class_='dataframe'):
