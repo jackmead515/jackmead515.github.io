@@ -9,3 +9,4 @@ https://jackmead515.github.io/notebooks/ensemble_seg.html
 https://jackmead515.github.io/notebooks/exploring_dominate_colors.html
 https://jackmead515.github.io/notebooks/auto_farm_soil_2.html
 https://jackmead515.github.io/notebooks/auto_farm_masks.html
+https://jackmead515.github.io/notebooks/auto_farm_time_series.html
