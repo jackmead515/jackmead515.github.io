@@ -94,6 +94,29 @@ main {
     margin: 0px;
 }
 
+.others {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.others > a {
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 33%;
+    padding: 10px;
+}
+
+.others > a:hover {
+    background-color: aliceblue;
+}
+
 @media screen and (max-width: 700px) {
     .about__section {
         margin-top: 40px;
