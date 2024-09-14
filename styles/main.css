@@ -30,16 +30,19 @@ main {
 
 .about__image--phenocam {
     aspect-ratio: 1.78;
+    box-sizing: border-box;
     background-image: url("../images/pheno_cam_field.jpg");
 }
 
 .about__image--biocam {
     aspect-ratio: 1.33;
+    box-sizing: border-box;
     background-image: url("../images/biocam.png");
 }
 
 .about__image--coffee {
     aspect-ratio: 1;
+    box-sizing: border-box;
     background-image: url("../images/kona_heatmap.png");
 }
 
@@ -84,6 +87,7 @@ main {
     gap: 10px;
     font-variant: all-small-caps;
     font-size: 14px;
+    text-wrap: nowrap;
 }
 
 .notebook > p {
