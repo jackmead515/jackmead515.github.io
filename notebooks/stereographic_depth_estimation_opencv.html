@@ -7837,16 +7837,16 @@ a.anchor-link {
 <ul>
 <li>The video feed was output as MJPEG, as it's lossless, and the VBR was set to 3 to keep the file size down while also maintaining a high quality image.</li>
 <li>The video feed was split into 10 second segments to keep the file size down and make it easier to work with.</li>
-<li>The second pipe output MPEG1 video with a much highly VBR quality as it is being streamed to the web application. I also cropped the image in half to only show the leaf camera feed. However, the pilot did mention that the quality may have still been too high and having visibility to both views would have been helpful.</li>
+<li>The second pipe output MPEG1 video with a much highly VBR (meaning lower quality) as it is being streamed to the web application. I also cropped the image in half to only show the left camera feed. However, the pilot did mention that the quality may have still been too high and having visibility to both views would have been helpful.</li>
 </ul>
-<p>Once the recording was done, we can utilizing FFMPEG to compiled the video segments into a single video file:</p>
+<p>Once the recording was done, we can utilize FFMPEG again to compiled the video segments into a single video file:</p>
 <div class="highlight"><pre><span></span><span class="c1"># output the file names to a text file sorted chronologically</span>
 ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">'s/^/file /'</span><span class="w"> </span>&gt;<span class="w"> </span>video.txt
 
 <span class="c1"># concatenate the files into a single video</span>
 ffmpeg<span class="w"> </span>-f<span class="w"> </span>concat<span class="w"> </span>-safe<span class="w"> </span><span class="m">0</span><span class="w"> </span>-i<span class="w"> </span>video.txt<span class="w"> </span>-c<span class="w"> </span>copy<span class="w"> </span>compiled.mp4
 </pre></div>
-<p>With all of this out of the way, it's time to drive the ROV around and capture some images of the checkerboard. For best calibration results, you want to drive the ROV around the checkerboard, at different depths, and at different angles (all angles of pitch, yaw, and roll). Capturing the geometry in all corners of the image plane is also important. And, if not for the sake of completeness, the scene should be free of high contrasting lighting conditions, reflections, or particulates in the water. These can make identifying the checkerboard corners difficult and inaccurate. This will become a lot more clear in the code outline below.</p>
+<p>With all of this out of the way, it's time to drive the ROV around and capture some images of the checkerboard. For best calibration results, you want to drive the ROV around the checkerboard, at different distances away from the board and at different angles (all angles of pitch, yaw, and roll). Capturing the geometry in all corners of the image plane is also important. And, if not for the sake of completeness, the scene should be free of high contrasting lighting conditions, reflections, or particulates in the water. These can make identifying the checkerboard corners difficult and inaccurate. This will become a lot more clear in the code outline below.</p>
 </div>
 </div>
 </div>
@@ -8594,7 +8594,7 @@ Calibrating Stereo Cameras: 100%|██████████| 10/10 [01:16&lt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Amazing! We see that the average reprojection error hovens around 1.5. Typically values below 2 are good calibrations. But it is achieveable to get sub 0.1 pixel error with a very good set of calibration points. But it depends on the setup and the desired accuracy. We can then select the calibration with the error closest to the average. It's worth also taking note of the estimated focal length. This length varies from 719.4 to 730.2! Since this number varies a bit, it's best looking at the average error to see if the calibration is good. I have seen sometimes a calibration that has a very low error, but the focal length is way off. This usually produces distorted images even after the undistortion process. So, it's important to look at both the error and the focal length.</p>
+<p>Amazing! We see that the average reprojection error hovers around 1.5. Typically values below 2 are good calibrations. But it is achieveable to get sub 0.1 pixel error with a very good set of calibration points. But it depends on the setup and the desired accuracy. We can then select the calibration with the error closest to the average. It's worth also taking note of the estimated focal length. This length varies from 719.4 to 730.2! Since this number varies a bit, it's best looking at the average error to see if the calibration is good. I have seen sometimes a calibration that has a very low error, but the focal length is way off. This usually produces distorted images even after the undistortion process. So, it's important to look at both the error and the focal length.</p>
 </div>
 </div>
 </div>
@@ -8892,11 +8892,11 @@ Calibrating Stereo Cameras: 100%|██████████| 10/10 [01:16&lt
 <ul>
 <li><p><code>numDisparities</code>: the number of disparities to search for. This is the range of depth that the algorithm will search for. The higher the number, the more depth you can see. But, the more computationally expensive the process is. This number should be divisible by 16.</p>
 </li>
-<li><p><code>blockSize</code>: the size of the block to search for. This is the size of the template that the algorithm will use to search for the best match. The larger the block, the more accurate the depth estimation. But, the more computationally expensive the process is.</p>
+<li><p><code>blockSize</code>: the size of the block to search for. This is the size of the template that the algorithm will use to search for the best match. For larger block sizes, you will have less noise but also less detail. The converse is true for smaller block sizes.</p>
 </li>
 <li><p><code>uniquenessRatio</code>: this is a parameter that defines the uniqueness of the match. The higher the number, the more unique the match has to be. This is useful for reducing noise in the disparity map.</p>
 </li>
-<li><p><code>speckleWindowSize</code> and <code>speckleRange</code>: these parameters are used to remove noise from the disparity map. The <code>speckleWindowSize</code> is the maximum size of the speckle in pixels and the <code>speckleRange</code> is the maximum disparity variation within the speckle. The <code>maxSpeckleSize</code> and <code>maxSpeckleDiff</code> are complimentary parameters that define how to filter out speckles that are unfortunately produced.</p>
+<li><p><code>speckleWindowSize</code> and <code>speckleRange</code>: these parameters are used to remove noise in the form of "speckles" from the disparity map. The <code>speckleWindowSize</code> is the maximum size of the speckle in pixels and the <code>speckleRange</code> is the maximum disparity variation within the speckle. The <code>maxSpeckleSize</code> and <code>maxSpeckleDiff</code> are complimentary parameters that define how to filter out speckles that are unfortunately produced.</p>
 </li>
 </ul>
 <p>But once we have the parameters tuned, we have a fully functional stereo camera system that can estimate depth in real-time! (at least on my PC). If you wanted to deploy this on a raspberry pi, you would have to only calculate disparity only on frames that contain a useful feature. For instance, you could deploy a small object detection model that detects fish or other objects and only calculates disparity on those frames. The ZED has a built-in NVIDIA GPU. So we could make use of the C++ API for OpenCV and CUDA optimizations to make this process real-time on all frames.</p>
