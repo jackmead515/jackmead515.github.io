@@ -11,6 +11,7 @@ main {
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 40px;
 }
 
@@ -23,7 +24,6 @@ main {
     height: 100%;
     max-height: 300px;
     border-radius: 10px;
-    border: 1px solid #ccc;
     background-size: cover;
     background-position: center;
 }
@@ -46,8 +46,11 @@ main {
     background-image: url("../images/kona_heatmap.png");
 }
 
-.main__notebooks {
-    
+.notebooks {
+    /* border-radius: 10px;
+    border: 1px solid #ccc;
+    max-height: 800px;
+    overflow: scroll; */
 }
 
 .notebooks > .notebook:nth-child(odd) {
@@ -115,6 +118,7 @@ main {
     justify-content: center;
     flex: 33%;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .others > a:hover {
