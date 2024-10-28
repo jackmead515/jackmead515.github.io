@@ -8904,7 +8904,7 @@ Calibrating Stereo Cameras: 100%|██████████| 10/10 [01:16&lt
 <div class="highlight"><pre><span></span><span class="n">depth</span> <span class="o">=</span> <span class="p">(</span><span class="n">focal_length</span> <span class="o">*</span> <span class="n">baseline</span><span class="p">)</span> <span class="o">/</span> <span class="n">disparity</span>
 </pre></div>
 <p>Where <code>focal_length</code> is the focal length of the camera (we use the calculated focal_length from the calibration), <code>baseline</code> is the distance between the two cameras, and <code>disparity</code> is the difference in the position of the same point in the two images. This is the value we tuned in the previous step.</p>
-<p>In OpenCV, the unit value of <code>focal_length</code> is given to us in 'millimeters'. So when we calculate <code>depth</code>, our <code>baseline</code> should also be in millimeters. For this camera we have specifically, the manufacturer (in the link above) gives us this value as 120mm. So, we can calculate the depth in millimeters.</p>
+<p>Given our <code>baseline</code> is in units of millimeters, we should get millimeters as our output of depth. For this camera we have specifically, the manufacturer (in the link above) gives us this value as 120mm.</p>
 <p>The code below shows this process and calculates the depth in meters for an arbitrary box in the center of the image.</p>
 </div>
 </div>
@@ -8946,7 +8946,7 @@ Calibrating Stereo Cameras: 100%|██████████| 10/10 [01:16&lt
 <span class="n">disparity_to_depth_map</span> <span class="o">=</span> <span class="n">calibration</span><span class="p">[</span><span class="s1">'disp_to_depth_mat'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">focal_length</span> <span class="o">=</span> <span class="n">calibration</span><span class="p">[</span><span class="s1">'focal_length'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
-<span class="c1"># this could be saved in the steroparameters.json file as well.</span>
+<span class="c1"># this could be saved in the stereoparameters.json file as well.</span>
 <span class="n">baseline_mm</span> <span class="o">=</span> <span class="mf">120.0</span>
 
 <span class="n">capture</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_POS_FRAMES</span><span class="p">,</span> <span class="mi">10500</span><span class="p">)</span>
