@@ -7,43 +7,96 @@ main {
 
 }
 
-.about__section {
+.about__gallery {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.about__section > p {
-    margin: 0px;
-}
-
-.about__image {
+.about__gallery__image {
     width: 100%;
     height: 100%;
-    max-height: 300px;
-    border-radius: 10px;
+    max-height: 200px;
+    border-radius: 5px;
     background-size: cover;
     background-position: center;
+    aspect-ratio: 1.0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
 }
 
-.about__image--phenocam {
-    aspect-ratio: 1.78;
-    box-sizing: border-box;
+.about__gallery__image .about__gallery__image__text {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+
+.about__gallery__image:hover .about__gallery__image__text {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.about__gallery__image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+}
+
+.about__gallery__image:hover::before {
+    opacity: 1;
+}
+
+.about__gallery__image--phenocam {
     background-image: url("../images/pheno_cam_field.jpg");
 }
 
-.about__image--biocam {
-    aspect-ratio: 1.33;
-    box-sizing: border-box;
+.about__gallery__image--biocam {
     background-image: url("../images/biocam.png");
 }
 
-.about__image--coffee {
-    aspect-ratio: 1;
-    box-sizing: border-box;
+.about__gallery__image--coffee {
     background-image: url("../images/kona_heatmap.png");
+}
+
+.about__gallery__image--biolength {
+    background-image: url("../images/biolength.jpeg");
+}
+
+.about__gallery__image--stereofish {
+    background-image: url("../images/stereo_fish.png");
+}
+
+.about__gallery__image--megalab {
+    background-image: url("../images/megalab.png");
+}
+
+.about__gallery__image--passage {
+    background-image: url("../images/passage.png");
+}
+
+.about__gallery__image--spectrograms {
+    background-image: url("../images/spectrograms.png");
+}
+
+.about__gallery__image--deepfish {
+    background-image: url("../images/deep_fish.png");
 }
 
 .notebooks {
