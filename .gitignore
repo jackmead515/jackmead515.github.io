@@ -3,3 +3,7 @@ _blogs/**/*.jpg
 _blogs/**/*.json
 _blogs/**/*.csv
 _blogs/**/*.parquet
+_blogs/**/*.ipynb_checkpoints
+_blogs/**/*.mp4
+_blogs/**/*.mkv
+_blogs/**/*.avi
