@@ -106,6 +106,8 @@ def on_audio_sample(sink):
     y_offset = (480 - video_height) // 2
     x_offset = (640 - video_width) // 2
     video_frame[y_offset:y_offset+video_height, x_offset:x_offset+video_width] = resized_spec
+
+    cv2.imwrite("spectrogram_test.png", video_frame)
     
     frame_buffer = Gst.Buffer.new_wrapped(video_frame.tobytes())
     frame_buffer.pts = pts
