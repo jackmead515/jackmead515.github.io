@@ -7,3 +7,7 @@ _blogs/**/*.ipynb_checkpoints
 _blogs/**/*.mp4
 _blogs/**/*.mkv
 _blogs/**/*.avi
+code/**/*.pt
+code/**/*.pth
+code/**/*.mp4
+code/**/*.mkv
