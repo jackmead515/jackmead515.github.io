@@ -11,3 +11,4 @@ code/**/*.pt
 code/**/*.pth
 code/**/*.mp4
 code/**/*.mkv
+__pycache__/
