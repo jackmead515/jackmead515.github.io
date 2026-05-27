@@ -13,21 +13,52 @@
     </head>
     <body>
         <header>
-            <!-- <div class="header__headshot"></div> -->
             <div>
                 <h1>Jack Mead</h1>
                 <div class="header__contact">
-                    <a href="https://github.com/jackmead515" target="_blank"><img width="16" height="16" src="images/github.png" alt="github"/></a>
-                    <a href="https://www.linkedin.com/in/jack-mead-687507a2/" target="_blank"><img width="16" height="16" src="images/linkedin.png" alt="github"/></a>
-                    <a href="mailto:jackmead515@gmail.com">
-                        <img style="margin-right: 8px; width: 16px;" src="images/mail.gif" alt="email"/>jackmead515@gmail.com
+                    <a href="https://github.com/jackmead515" target="_blank" class="contact-link">
+                        <img class="contact-icon" src="images/github.png" alt="github"/>
+                        <span>github.com/jackmead515</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jack-mead-687507a2/" target="_blank" class="contact-link">
+                        <img class="contact-icon" src="images/linkedin.png" alt="linkedin"/>
+                        <span>linkedin.com/in/jack-mead</span>
+                    </a>
+                    <a href="mailto:jackmead515@gmail.com" class="contact-link">
+                        <img class="contact-icon mail-gif" src="images/mail.gif" alt="email"/>
+                        <span>jackmead515@gmail.com</span>
                     </a>
                 </div>
             </div>
-            <div>
-                <p><b>Applications</b>: Data Pipelines, Machine Learning, Computer Vision, Video/Audio Processing, Platform Engineering</p>
-                <p><b>Languages</b>: Python, SQL, Rust, Node.js, English</p>
-                <p><b>Platforms</b>: K8S, AWS, GCP</p>
+            <div class="header__meta">
+                <div class="meta-section">
+                    <span class="meta-label">APPLICATIONS:</span>
+                    <div class="meta-values">
+                        <span class="retro-tag">Data Pipelines</span>
+                        <span class="retro-tag">Machine Learning</span>
+                        <span class="retro-tag">Computer Vision</span>
+                        <span class="retro-tag">Video/Audio Processing</span>
+                        <span class="retro-tag">Platform Engineering</span>
+                    </div>
+                </div>
+                <div class="meta-section">
+                    <span class="meta-label">LANGUAGES:</span>
+                    <div class="meta-values">
+                        <span class="retro-tag">Python</span>
+                        <span class="retro-tag">SQL</span>
+                        <span class="retro-tag">Rust</span>
+                        <span class="retro-tag">Node.js</span>
+                        <span class="retro-tag">English</span>
+                    </div>
+                </div>
+                <div class="meta-section">
+                    <span class="meta-label">PLATFORMS:</span>
+                    <div class="meta-values">
+                        <span class="retro-tag">K8S</span>
+                        <span class="retro-tag">AWS</span>
+                        <span class="retro-tag">GCP</span>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -69,7 +100,7 @@
                     </div>
                     <div class="about__gallery__image lazy" data-src="images/megalab.png">
                         <div class="about__gallery__image__bg"></div>
-                        <div class="about__gallery__image__text">Realtime stereographic depth estimation from an ROV mounted camera</div>
+                        <div class="about__gallery__image__text">Underwater calibration and stereographic depth estimation from an ROV mounted camera</div>
                     </div>
                     <div class="about__gallery__image lazy" data-src="images/passage.png">
                         <div class="about__gallery__image__bg"></div>
@@ -93,19 +124,19 @@
             </div>
             <div class="main__notebooks">
                 <h2>Projects</h2>
-                <p></p>
+                <p>
                     I work on many different projects in my free time. Applying computer vision
                     and AI to coffee plants, fish, scuba diving footage, custom game engines, sales projections
                     for my side hustle, and other querkier projects. Feel free to check out any of my 
                     projects you find interesting.
                 </p>
-                <p style="margin-bottom: 40px;">
+                <div class="terminal-note">
                     <b>NOTE:</b> When I develop these notebooks, they are exploratory in nature. They
                     may contain errors, incomplete analysis, or failed experiments. I try to showcase
                     my learning process as best as I can, as I believe there is humility and growth
                     in our mistakes. If you find something wrong, please reach out to me so I can
                     correct it!
-                </p>
+                </div>
                 <div class="notebooks">
                     <a class="notebook" href="notebooks/megalab_fish_feature_extraction.html">
                         <h4>Feature Extraction and Clustering on Fish in MegaLab Camera</h4>
@@ -196,57 +227,65 @@
                     in any blog or notebook. But here are some direct links so some of my favorites.
                 </p>
                 <div class="others">
-                    <a href="https://github.com/jackmead515/plof" target="_blank">
-                        Python library for graphing live data streams in the terminal
+                    <a class="other-card" href="https://github.com/jackmead515/plof" target="_blank">
+                        <span class="other-card__title">plof</span>
+                        <p class="other-card__desc">Python library for graphing live data streams in the terminal</p>
                     </a>
-                    <a href="https://github.com/jackmead515/rust_dht11" target="_blank">
-                        Rust driver for DHT11 temperature/humidity sensor for Raspberry Pi
+                    <a class="other-card" href="https://github.com/jackmead515/rust_dht11" target="_blank">
+                        <span class="other-card__title">rust_dht11</span>
+                        <p class="other-card__desc">Rust driver for DHT11 temperature/humidity sensor for Raspberry Pi</p>
                     </a>
-                    <a href="https://github.com/jackmead515/rust_mcp3008" target="_blank">
-                        Rust driver for MCP3008 10bit analog to digital converter for Raspberry Pi
+                    <a class="other-card" href="https://github.com/jackmead515/rust_mcp3008" target="_blank">
+                        <span class="other-card__title">rust_mcp3008</span>
+                        <p class="other-card__desc">Rust driver for MCP3008 10bit analog to digital converter for Raspberry Pi</p>
                     </a>
-                    <a href="https://github.com/jackmead515/blog/blob/master/plugins/rust-wasm-sat/src/lib.rs" target="_blank">
-                        Simple 2D Physics simulation with gravity, elastic collision rectification, and
-                        seperate axis theorm for collision detection, in Rust with WASM support
+                    <a class="other-card" href="https://github.com/jackmead515/blog/blob/master/plugins/rust-wasm-sat/src/lib.rs" target="_blank">
+                        <span class="other-card__title">rust-wasm-sat</span>
+                        <p class="other-card__desc">Simple 2D Physics simulation with gravity, elastic collision rectification, and separate axis theorem for collision detection, in Rust with WASM support</p>
                     </a>
-                    <a href="https://github.com/jackmead515/fix-dive" target="_blank">
-                        Ambitious project applying auto color correction and
-                        object detection/tracking to beautify scuba diving footage
+                    <a class="other-card" href="https://github.com/jackmead515/fix-dive" target="_blank">
+                        <span class="other-card__title">fix-dive</span>
+                        <p class="other-card__desc">Ambitious project applying auto color correction and object detection/tracking to beautify scuba diving footage</p>
                     </a>
-                    <a href="https://github.com/jackmead515/depth_discover/blob/master/discover.py" target="_blank">
-                        Stereographic camera calibration for tunable depth estimation
+                    <a class="other-card" href="https://github.com/jackmead515/depth_discover/blob/master/discover.py" target="_blank">
+                        <span class="other-card__title">depth_discover</span>
+                        <p class="other-card__desc">Stereographic camera calibration for tunable depth estimation</p>
                     </a>
-                    <a href="https://crates.io/crates/rjdebounce" target="_blank">
-                        Rust crate for debouncing functions
+                    <a class="other-card" href="https://crates.io/crates/rjdebounce" target="_blank">
+                        <span class="other-card__title">rjdebounce</span>
+                        <p class="other-card__desc">Rust crate for debouncing functions</p>
                     </a>
-                    <a href="https://crates.io/crates/rjwindow" target="_blank">
-                        Rust crate for a window data structure
+                    <a class="other-card" href="https://crates.io/crates/rjwindow" target="_blank">
+                        <span class="other-card__title">rjwindow</span>
+                        <p class="other-card__desc">Rust crate for a window data structure</p>
                     </a>
-                    <a href="https://github.com/jackmead515/rjchunker/tree/master" target="_blank">
-                        Lazy network protocol for streaming large files out of order
-                        and in slow time
+                    <a class="other-card" href="https://github.com/jackmead515/rjchunker/tree/master" target="_blank">
+                        <span class="other-card__title">rjchunker</span>
+                        <p class="other-card__desc">Lazy network protocol for streaming large files out of order and in slow time</p>
                     </a>
-                    <a href="https://github.com/jackmead515/rust_l293d" target="_blank">
-                        Rust driver for L293D motor driver for Raspberry Pi
+                    <a class="other-card" href="https://github.com/jackmead515/rust_l293d" target="_blank">
+                        <span class="other-card__title">rust_l293d</span>
+                        <p class="other-card__desc">Rust driver for L293D motor driver for Raspberry Pi</p>
                     </a>
-                    <a href="https://github.com/jackmead515/2d_game_engine" target="_blank">
-                        2D Java game engine with quad-tree optimized seperate axis theorem
-                        collision detection and elastic recification
+                    <a class="other-card" href="https://github.com/jackmead515/2d_game_engine" target="_blank">
+                        <span class="other-card__title">2d_game_engine</span>
+                        <p class="other-card__desc">2D Java game engine with quad-tree optimized separate axis theorem collision detection and elastic rectification</p>
                     </a>
-                    <a href="https://github.com/jackmead515/rust_jsm_encryption" target="_blank">
-                        Unnecessarily verbose modifiable encryption algorithm
-                        based on customizable rulebook for personalized usage
+                    <a class="other-card" href="https://github.com/jackmead515/rust_jsm_encryption" target="_blank">
+                        <span class="other-card__title">rust_jsm_encryption</span>
+                        <p class="other-card__desc">Unnecessarily verbose modifiable encryption algorithm based on customizable rulebook for personalized usage</p>
                     </a>
-                    <a href="https://github.com/jackmead515/light_robot_simulator/tree/master" target="_blank">
-                        C++ based light tracking robot simulator with realistic light refraction
+                    <a class="other-card" href="https://github.com/jackmead515/light_robot_simulator/tree/master" target="_blank">
+                        <span class="other-card__title">light_robot_simulator</span>
+                        <p class="other-card__desc">C++ based light tracking robot simulator with realistic light refraction</p>
                     </a>
-                    <a href="https://github.com/jackmead515/ir_robot/tree/master" target="_blank">
-                        Very simple TV remote controlled Arduino based robot. (A college project
-                        for a science fair)
+                    <a class="other-card" href="https://github.com/jackmead515/ir_robot/tree/master" target="_blank">
+                        <span class="other-card__title">ir_robot</span>
+                        <p class="other-card__desc">Very simple TV remote controlled Arduino based robot (college project for a science fair)</p>
                     </a>
-                    <a href="https://github.com/jackmead515/multiplayerGame/tree/master" target="_blank">
-                        Very first game I ever made that implements network based multiplayer
-                        gaming and bullet collision detection and scoring
+                    <a class="other-card" href="https://github.com/jackmead515/multiplayerGame/tree/master" target="_blank">
+                        <span class="other-card__title">multiplayerGame</span>
+                        <p class="other-card__desc">Very first game I ever made that implements network based multiplayer gaming and bullet collision detection and scoring</p>
                     </a>
                 </div>
             </div>

@@ -1,22 +1,72 @@
+:root {
+    --bg-color: #faf9f6; /* Warm off-white, classic paper */
+    --text-color: #1c1917; /* Slate charcoal */
+    --accent-color: #0d9488; /* Elegant retro teal */
+    --accent-hover: #0f766e;
+    --border-color: #d6d3d1; /* Stone border */
+    --hover-bg: #f5f5f4; /* Soft selection gray */
+    --title-color: #0c0a09;
+    --caret-color: #0d9488;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --transition-speed: 0.15s;
+}
+
 body {
     margin: 0;
-    padding: 10px;
+    padding: 20px;
     padding-top: 40px;
     padding-bottom: 50vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    font-family: monospace;
-    font-size: 16px;
-    color: #000;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     display: grid;
     grid-template-rows: auto;
-    gap: 20px;
-    line-height: 30px;
+    gap: 30px;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 p {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    background-color: var(--hover-bg);
+}
+
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.retro-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 2px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    font-size: 13px;
+    cursor: default;
+    transition: all var(--transition-speed) ease;
+}
+
+.retro-tag:hover {
+    background-color: var(--hover-bg);
+    border-color: var(--accent-color);
 }
