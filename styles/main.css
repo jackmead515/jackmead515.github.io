@@ -118,6 +118,10 @@ main {
     line-height: 1.5;
 }
 
+.main__notebooks {
+    margin-top: 20px;
+}
+
 .notebooks {
     border: 1px solid var(--border-color);
     background-color: transparent;
@@ -261,6 +265,32 @@ main {
     font-size: 13px;
     line-height: 1.4;
     opacity: 0.9;
+}
+
+.main__recent-work {
+    margin-top: 20px;
+}
+
+.recent-work__container {
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-work__iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .recent-work__iframe {
+        height: 350px;
+    }
 }
 
 @media screen and (max-width: 700px) {
